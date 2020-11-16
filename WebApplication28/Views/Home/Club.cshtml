@@ -1,0 +1,196 @@
+﻿@model IEnumerable<WebApplication28.Models.club>
+@{
+    ViewBag.Title = "Club";
+}
+
+<h2>Club</h2>
+<html>
+<head>
+    <title>
+
+    </title>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <style>
+        .row:hover {
+            background-color: darkgray;
+            color: black;
+        }
+    </style>
+</head>
+<body >
+    <strong>  <p style="font-size:80px;color:gray;font-family:Calibri;">106 CLUBS</p></strong>
+    <hr />
+
+
+    @using (Html.BeginForm("Club", "Home", FormMethod.Get))
+
+    {
+
+        @Html.TextBox("Searching")<input type="submit" value="Search" class="btn-success" placeholder="Enter the City"  />
+<br />
+        <table class="table table-hover">
+
+            <thead style="background-color:black; color:white">
+
+                <tr>
+
+                    <th>Club Name</th>
+
+                    <th>Club City</th>
+
+                    <th>Postal Address</th>
+
+                    <th>Contact Number</th>
+
+                </tr>
+
+            </thead>
+
+            @if (Model.Count() == 0)
+
+            {
+
+                <tr>
+
+                    <td>
+
+                        No such Club Found in the entire list
+
+                    </td>
+
+                </tr>
+
+            }
+
+            else
+
+            {
+
+                foreach (var item in Model)
+
+                {
+
+                    <tr>
+
+                        <td>@item.ClubName</td>
+
+                        <td>@item.Address</td>
+
+                        <td>@item.Pincode</td>
+
+                        <td>@item.Contact</td>
+
+                    </tr>
+
+                }
+
+            }
+
+        </table>
+
+    }
+
+    <div class="container ">
+        <div class="row">
+            <div class="col-6 col-md-4" style="color:gray;">
+                <h3> Boston</h3>
+                <p>From the heart of downtown to fashionable Back Bay, our  Boston clubs are designed to inspire. Each location delivers the essential elements of well-being, including innovative classes, exceptional trainers, and now the Precision Running Lab, our breakthrough standalone running studio, only at Equinox Chestnut Hill.</p>
+            </div>
+            <div class="col" style="color:gray;position:absolute;left:500px;">
+                <h3>  Featured Clubs</h3>
+                <ul>
+                    <li>    Equinox Chestnut Hill</li>
+                    <li>    Equinox Sports Club Boston</li>
+                </ul>
+            </div>
+            <div style="position:absolute;left:900px;">
+
+                <img src="~/Content/club1.jpg" />
+
+
+            </div>
+
+        </div>
+    </div>
+    <hr />
+
+    <div class="container ">
+        <div class="row">
+            <div class="col-6 col-md-4" style="color:gray;">
+
+                Canada
+                With two locations open in Toronto and a third in Vancouver, our portfolio of fitness clubs in Canada continues to expand and inspire. From bustling Bay Street to trendsetting Yorkville, our Toronto clubs set an unparalleled level of luxury fitness to the beat of the city’s cosmopolitan pulse. Our stunning West Georgia Street club has taken Vancouver’s dedication to health and wellness to new heights.
+            </div>
+
+            <div class="col" style="color:gray;position:absolute;left:500px;">
+                Featured Clubs
+                <ul>
+                    <li>Equinox Bay Street</li>
+                    <li> Equinox West Georgia Street</li>
+                </ul>
+            </div>
+            <div style="position:absolute;left:900px;">
+
+
+                <img src="~/Content/club2.jpg" height="160" width="225" />
+
+
+            </div>
+
+        </div>
+    </div>
+    <hr />
+
+
+
+
+    <div class="container ">
+        <div class="row">
+            <div class="col-6 col-md-4" style="color:gray;">
+
+                Northern California
+                Explore an utterly unique Bay Area fitness experience. From the Pacific Coast Stock Exchange building's Diego Rivera mural to San Mateo's sun-drenched rooftop pool, you'll find inspiration and energy at our luxury gyms in the Bay Area. Discover innovative group fitness classes, top-tier trainers and spacious fitness floors, as well as luxurious spas and boutiques.
+
+
+
+            </div>
+
+            <div class="col" style="color:gray;position:absolute;left:500px;">
+                Featured Clubs
+                <ul>
+                    <li>
+                        Equinox Union Street
+                    </li>
+                    <li>
+                        Equinox San Ramon
+                    </li>
+
+                </ul>
+            </div>
+            <div style="position:absolute;left:900px;">
+
+                <img src="~/Content/club3.jpg" />
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

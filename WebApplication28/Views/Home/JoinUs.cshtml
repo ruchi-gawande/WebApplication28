@@ -1,0 +1,130 @@
+﻿@model WebApplication28.Models.joinnow
+@{
+    ViewBag.Title = "JoinUs";
+}
+
+<h2>JoinUs</h2>
+
+<html>
+<head>
+    <title></title>
+    <style>
+        .photo {
+            position: absolute;
+            top: 0px;
+            left: 300px;
+        }
+
+        .jumbotron {
+            width: 800px;
+            position: absolute;
+            left: 200px;
+        }
+
+        .form-control {
+            border: solid;
+            border-color: greenyellow;
+        }
+
+        .bg {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body style="background-image: url('../../Content/gympic3.jpeg')">
+
+   
+    <br />
+    <br />
+
+
+    <div class="d-flex justify-content-center form_container">
+
+        <br />
+        <br />
+        <div class="jumbotron">
+            @using (Html.BeginForm("JoinUs", "Home", FormMethod.Post))
+            {
+                <br /><br />
+                <h1 style="text-align:center;">Membership Form</h1>
+                <div class="photo">
+                    <img src="~/Content/gymlogo2.png" width="100" height="100" />
+                </div>
+
+                <div style="max-width: 400px;align-content:center;">
+
+
+                    @Html.LabelFor(model=>model.First_Name)
+
+                    @Html.TextBoxFor(model => model.First_Name, new { @class = "form-control" })
+
+
+                    @Html.LabelFor(model => model.Last_Name)
+
+                    @Html.TextBoxFor(model => model.Last_Name, new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(model => model.Last_Name, null, new { @class = "text text-danger" })
+
+                    @Html.LabelFor(model => model.DOB)
+
+                    @Html.TextBoxFor(model => model.DOB, new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(model => model.DOB, null, new { @class = "text text-danger" })
+
+                    @Html.LabelFor(model => model.Gender)
+
+                    @Html.TextBoxFor(model => model.Gender, new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(model => model.Gender, null, new { @class = "text text-danger" })
+
+                    @Html.LabelFor(model => model.City)
+
+
+                    @Html.TextBoxFor(model => model.City, new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(model => model.City, null, new { @class = "text text-danger" })
+
+                    @Html.LabelFor(model => model.State)
+
+                    @Html.TextBoxFor(model => model.State, new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(model => model.State, null, new { @class = "text text-danger" })
+
+                    @Html.LabelFor(model => model.Country)
+
+                    @Html.TextBoxFor(model => model.Country, new { @class = "form-control" })
+
+
+                    @Html.ValidationMessageFor(model => model.Country, null, new { @class = "text text-danger" })
+
+
+                    @Html.LabelFor(model => model.Contact)
+
+                    @Html.TextBoxFor(model => model.Contact, new { @class = "form-control" })
+
+
+                    @Html.ValidationMessageFor(model => model.Contact, null, new { @class = "text text-danger" })
+
+                    @Html.LabelFor(model => model.Email_Id)
+
+                    @Html.TextBoxFor(model => model.Email_Id, new { @class = "form-control" })
+
+
+                    @Html.ValidationMessageFor(model => model.Email_Id, null, new { @class = "text text-danger" })
+
+                   
+                  
+
+                  <br /><br />  <input type="submit" value="Join Now" class="btn btn-success"  />
+
+
+                    @Html.ValidationMessage("Error", null, new { @class = "text text-danger" })
+                </div>
+
+            }
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebApplication28.Models.MembershipPlan>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Plan_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plan_Duration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plan_Fees)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plan_Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plan_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plan_Duration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plan_Fees)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plan_Description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Plan_Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Plan_Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Plan_Id })
+        </td>
+    </tr>
+}
+
+</table>

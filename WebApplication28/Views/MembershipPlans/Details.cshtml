@@ -1,0 +1,50 @@
+﻿@model WebApplication28.Models.MembershipPlan
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MembershipPlan</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Plan_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plan_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plan_Duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plan_Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plan_Fees)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plan_Fees)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plan_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plan_Description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Plan_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

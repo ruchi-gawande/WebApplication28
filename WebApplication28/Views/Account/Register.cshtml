@@ -1,0 +1,130 @@
+﻿@model WebApplication28.Models.UserModel
+@{
+    ViewBag.Title = "Register";
+}
+<html>
+<head>
+    <title></title>
+    <style>
+        .photo {
+            position: absolute;
+            top: 0px;
+            left: 300px;
+        }
+        .jumbotron{
+            width:800px;
+            position:absolute;
+            left:200px;
+        }
+        .form-control {
+            border: solid;
+            border-color: greenyellow;
+        }
+        .bg {
+           
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body style="background-image: url('../../Content/gympic3.jpeg')" >
+
+    <h1>Registration</h1>
+    <br />
+    <br />
+
+
+    <div class="d-flex justify-content-center form_container">
+
+        <br />
+        <br />
+        <div class="jumbotron">
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+            {
+                <br /><br />
+                <h1 style="text-align:center;">Sign Up</h1>
+                <div class="photo">
+                    <img src="~/Content/gymlogo2.png" width="100" height="100" />
+                </div>
+
+                <div style="max-width: 400px;align-content:center;">
+
+
+                    @Html.LabelFor(model => model.userid)
+
+                    @Html.TextBoxFor(model => model.userid, new { @class = "form-control" })
+
+
+                    @Html.LabelFor(model => model.username)
+
+                    @Html.TextBoxFor(model => model.username, new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(model => model.username, null, new { @class = "text text-danger" })
+
+                    @Html.LabelFor(model => model.age)
+
+                    @Html.TextBoxFor(model => model.age, new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(model => model.age, null, new { @class = "text text-danger" })
+
+                    @Html.LabelFor(model => model.email)
+
+                    @Html.TextBoxFor(model => model.email, new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(model => model.email, null, new { @class = "text text-danger" })
+
+                    @Html.LabelFor(model => model.address)
+
+
+                    @Html.TextBoxFor(model => model.address, new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(model => model.address, null, new { @class = "text text-danger" })
+
+                    @Html.LabelFor(model => model.city)
+
+                    @Html.TextBoxFor(model => model.city, new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(model => model.city, null, new { @class = "text text-danger" })
+
+                    @Html.LabelFor(model => model.state)
+
+                    @Html.TextBoxFor(model => model.state, new { @class = "form-control" })
+
+
+                    @Html.ValidationMessageFor(model => model.state, null, new { @class = "text text-danger" })
+
+
+                    @Html.LabelFor(model => model.country)
+
+                    @Html.TextBoxFor(model => model.country, new { @class = "form-control" })
+
+
+                    @Html.ValidationMessageFor(model => model.country, null, new { @class = "text text-danger" })
+
+                    @Html.LabelFor(model => model.gender)
+
+                    @Html.TextBoxFor(model => model.gender, new { @class = "form-control" })
+
+
+                    @Html.ValidationMessageFor(model => model.gender, null, new { @class = "text text-danger" })
+
+                    @Html.LabelFor(model => model.contact)
+
+                    @Html.TextBoxFor(model => model.contact, new { @class = "form-control" })
+
+                    @Html.ValidationMessageFor(model => model.contact, null, new { @class = "text text-danger" })
+                    @*<input type="file" id="myFile" name="filename">
+                    <input type="submit">*@
+
+                    <input type="submit" value="Register" />
+                 
+
+                    @Html.ValidationMessage("Error", null, new { @class = "text text-danger" })
+                </div>
+
+            }
+        </div>
+    </div>
+</body>
+</html>

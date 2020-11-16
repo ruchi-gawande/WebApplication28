@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+}
+<br /><br />
+
+
+<html>
+<head>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<body>
+    <br /><br /><br />
+
+
+    <img src="~/Content/admin1.jpg" />
+    <h2 style="position:absolute;left:600px;top:300px;color:dodgerblue;font-size:50px;"><strong>Welcome Admin!</strong></h2>
+
+    <hr /><br /><br /><br /><br /><div style="position:absolute;left:500px;top:580px;"><h3>Membership Plan Controls</h3>
+        <img src="~/Content/gymmember.jpg" width="200" height="200">
+    </div>
+                                  <button style='font-size:24px ; position:absolute;top:850px;left:200px;background-color:lawngreen' > @Html.ActionLink("Add Plan", "Create", "MemberShipPlans")<i class='fas fa-plus'></i></button>
+                                  <button style='font-size:24px; position:absolute;top:850px;left:400px;background-color:lawngreen'> @Html.ActionLink("Edit Plan", "Index", "MemberShipPlans")<i class='fas fa-edit'></i></button>
+                                  <button style='font-size:24px; position:absolute;top:850px;left:600px;background-color:lawngreen'> @Html.ActionLink("Delete Plan", "Index", "MemberShipPlans") <i class='fas fa-trash-alt'></i></button>
+                                  <button style='font-size:24px ; position:absolute;top:850px;left:800px;background-color:lawngreen'> @Html.ActionLink("List of Plans", "Index", "MemberShipPlans") <i class='fas fa-table'></i></button>
+    <div style="height:200px;">
+        <p>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />vv
+            <hr />
+
+
+
+
+
+
+
+
+
+
+        </p>
+        
+
+
+    </div>
+</body>
+</html>
